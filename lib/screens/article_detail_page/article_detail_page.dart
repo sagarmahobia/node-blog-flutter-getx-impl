@@ -20,15 +20,9 @@ class ArticleDetailPage extends StatefulWidget {
 }
 
 class _ArticleDetailPageState extends State<ArticleDetailPage> {
-  var arguments = Get.arguments as ArticleDetailPageArgument;
+  // var arguments = Get.arguments as ArticleDetailPageArgument;
 
   var controller = Get.find<ArticleDetailController>();
-
-  @override
-  void initState() {
-    super.initState();
-    controller.getArticleDetail(arguments.id);
-  }
 
   @override
   Widget build(BuildContext context) {

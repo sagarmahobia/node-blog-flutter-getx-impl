@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_bloc/di/injection.dart';
@@ -5,14 +6,10 @@ import 'package:getx_bloc/screens/article_detail_page/article_detail_controller.
 import 'package:getx_bloc/screens/article_detail_page/article_detail_page.dart';
 import 'package:getx_bloc/screens/the_category_articles/the_category_article_binding.dart';
 import 'package:getx_bloc/screens/the_category_articles/the_category_articles.dart';
-import 'package:getx_bloc/screens/the_category_articles/the_category_controller.dart';
 import 'package:getx_bloc/screens/the_front_page/front_page_binding.dart';
-import 'package:getx_bloc/screens/the_front_page/front_page_controller.dart';
 import 'package:getx_bloc/screens/the_front_page/the_front_page.dart';
 import 'package:getx_bloc/screens/the_search/search_page_binding.dart';
-import 'package:getx_bloc/screens/the_search/the_search_controller.dart';
 import 'package:getx_bloc/screens/the_search/the_search_page.dart';
-import 'package:getx_bloc/views/category/category_slider_controller.dart';
 
 void main() async {
   await configureInjection();
@@ -30,6 +27,11 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: TheRoutes.frontPage.routeName,
       getPages: PageRoutes.getPages,
+      theme: CupertinoThemeData(
+        brightness: Brightness.light,
+        primaryColor: Colors.blueGrey.shade800,
+        scaffoldBackgroundColor: Colors.white,
+      ),
     );
   }
 }

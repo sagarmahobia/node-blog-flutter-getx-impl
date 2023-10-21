@@ -27,9 +27,7 @@ class _TheFrontPageState extends State<TheFrontPage> {
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
-      backgroundColor: CupertinoColors.white,
       navigationBar: CupertinoNavigationBar(
-        backgroundColor: CupertinoColors.white,
         border: null,
         middle: Text(
           'Bloggy',
